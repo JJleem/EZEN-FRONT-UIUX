@@ -162,5 +162,18 @@ CSS를 학습할 때, 가장 중요한 요소!
 
 
 
+1. 폴더생성
+2. 해당폴더를 root로 잡고 vscode 연다
+3. 터미널
+4. 터미널- git bash
+5. git init 하여 초기화함 (최초에만)
+6. 최초에만 명령어입력 git pull origin master --allow-unrelated-histories
+7. 그다음 git pull origin master
+
+(단 예외가있음 브랜치명이 master 가아닌 main에 경유
+로컬컴퓨터의 브랜치명도 main으로 바꿔줘야함
+> git branch -m master main
+
+
 
 
