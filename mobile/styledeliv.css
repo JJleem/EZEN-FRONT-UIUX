@@ -1,0 +1,90 @@
+@import url("./reset.css");
+#wrap {
+  position: relative;
+}
+
+#main_header {
+  width: 100%;
+  position: absolute;
+  background: #2cc1bd;
+  border-radius: 0 0 20px 20px;
+}
+#top_header select {
+  margin: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+#top_header #top_imoticon {
+  position: absolute;
+  display: flex;
+  margin: 20px;
+  right: 0px;
+  top: 0px;
+}
+
+#search_bar {
+  background: #fff;
+  margin: 20px 20px 40px;
+}
+#search_bar input {
+  border: none;
+  font-size: 16px;
+  padding: 8px;
+}
+
+#top_section {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+
+  font-size: 14px;
+}
+#top_section ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+#top_section ul li {
+  border: 1px solid #2cc1bd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+}
+
+#middetop_section {
+  position: relative;
+  top: 230px;
+  width: 100%;
+  padding: auto;
+  display: block;
+  align-items: center;
+}
+#baemin1 {
+  float: left;
+  width: 439px;
+  height: 514px;
+  scale: 100%;
+  background: url("./img/img/b_1.jpg") no-repeat;
+  border-radius: 40px;
+  margin-right: 100px;
+  
+}
+#deliv {
+  float: left;
+  width: 439px;
+  height: 514px;
+  scale: 100%;
+  background: url("./img/img/b_2.jpg") no-repeat;
+  border-radius: 40px;
+  
+}
+#pack {
+  border: 1px solid #f00;
+}
+#store {
+  border: 1px solid #f00;
+}
