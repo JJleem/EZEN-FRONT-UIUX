@@ -1,0 +1,67 @@
+@import url("./reset.css");
+@font-face {
+  font-family: "pro";
+  src: url("./font/GTPressuraMono.ttf") format("truetype");
+}
+
+body {
+  width: 100%;
+  background: url("./img/visual\ basic.png") center/cover no-repeat;
+  margin: 0 auto;
+  font-family: pro;
+  height: 100%;
+}
+
+#top-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #e8e8e8;
+  font-size: 1.8em;
+  margin-top: 5.2%;
+  text-align: center;
+}
+#left-top-header {
+  display: flex;
+  justify-content: space-around;
+  width: 40.625%;
+  margin-left: 3.489%;
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+}
+#middle-top-header {
+  text-align: center;
+}
+#right-top-header {
+  display: flex;
+  justify-content: space-around;
+  width: 40.625%;
+  margin-right: 3.489%;
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+section #main-section  {
+  width: 100%;
+  color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #f00;
+  padding-top: 20%;
+}
+
+#main-title1 {
+  font-size: 250px;
+}
+#main-title2 {
+  width: 80%;
+  margin: 0 0% 0% 12%;
+  border:7px solid #e8e8e8;
+
+}
+#main-title2 {
+  font-size: 250px;
+  margin-top: 10%;
+}
+
