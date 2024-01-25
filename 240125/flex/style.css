@@ -1,0 +1,47 @@
+@import url("./reset.css");
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: calc(1200px - 100vh);
+  background: gray;
+  height: 100vh;
+}
+#wrapp {
+  width: calc(100vh);
+
+  margin: 0 auto;
+  height: 100vh;
+}
+
+header {
+  height: 150px;
+  background: dodgerblue;
+  text-align: center;
+}
+section {
+  display: flex;
+
+  height: calc(100vh - 300px);
+}
+article {
+  background: yellowgreen;
+  flex: 2;
+}
+aside {
+  flex: 1;
+  flex-direction: column;
+  height: calc(100vh - 150px);
+  background: #fff;
+}
+footer {
+  background: gray;
+  height: 150px;
+  text-align: center;
+  align-items: center;
+}
