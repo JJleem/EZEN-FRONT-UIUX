@@ -58,7 +58,12 @@
 .nav {
   order: 2;
   width: 100%;
+  display: none;
 }
+.nav.active {
+  display: block;
+}
+
 .gnb li {
   display: flex;
   background: #2c3e50;
@@ -172,7 +177,7 @@ span.next_btn {
   margin-top: 0;
 }
 
-/* gallery */ 
+/* gallery */
 .gallery_section {
   order: 6;
   padding: 50px 12.5%;
@@ -438,12 +443,11 @@ span.next_btn {
     margin: 1.5rem 0;
   }
 
-/*footer*/
-.footer p {
-  padding: 40px 0;
-  padding: 2.5rem 0;
-}
-
+  /*footer*/
+  .footer p {
+    padding: 40px 0;
+    padding: 2.5rem 0;
+  }
 }
 /*=====desktop======*/
 @media screen and (min-width: 960px) {
