@@ -1,0 +1,52 @@
+1. 행 = row = 가로
+
+2. 열 = column = 세로
+
+> grid / 
+
+*사용하는 단어 비슷한게 많음!!
+justify / align - content / items
+
+* flex => 단일차원 행.열 레이아웃
+* grid => 다차원의 행.열 레이아웃
+
+p / a => top / left
+align || justify contetnt
+
+grid - column / row
+
+grid로 레이아웃을 정렬하고자 할 때, 현재보이는 화면을 가준을로 향 &열을 재정립해나가면서 최종적인 ui 화면완성!
+
+미리 완성된 결과물을 figma를 통해서 행&열을 정의한후 grid문법을 사용하는것!
+
+1) portfolio 홈페이지
+2) portfolio 작업물
+-작업물 30개정도
+-flex만으로 완성된 웹페이지 (*메인) 1~2개
+-grid 만으로 완성된 웹페이지 (*메인) 1~2개
+>
+display : grid
+grid-template-columns
+grid-template-rows
+grid-template-areas
+
+기존에 사용하고있던 요소들은 그대로 둔 상태에서 업그레이드가 된 새로운 무언가를 탄생!!!
+
+sass 
+
+
+
+scss. 확장자가 .scss
+
+
+
+=> 웹 브라우저 : html / css / js
+
+컴파일링을 한다!!!!
+=Compiling => 어떤 요소를 번역해주는 역할
+=Compiler => 컴파일링을 해주는 요소
+> SCSS = CSS 
+
+* SCSS만으로 구성된 프로젝트 
+> 개인프로젝트 !
+> scss 작업 /
