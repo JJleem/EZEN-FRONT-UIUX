@@ -1,0 +1,19 @@
+
+
+
+
+
+.font {
+  &-large {
+    font-size: 100px;
+  }
+  &-medium {
+    font-size: 40px;
+  }
+  &-small {
+    color: blue;
+  }
+}
+body {
+  border: 1px solid #f00;
+}

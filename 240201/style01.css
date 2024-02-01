@@ -1,0 +1,13 @@
+.font-large {
+  font-size: 100px;
+}
+.font-medium {
+  font-size: 40px;
+}
+.font-small {
+  color: blue;
+}
+
+body {
+  border: 1px solid #f00;
+}/*# sourceMappingURL=style01.css.map */

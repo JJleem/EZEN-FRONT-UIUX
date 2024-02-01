@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+body .section {
+  width: 200px;
+  height: 480px;
+  display: grid;
+  grid-template-areas: "figma figma" " redd redw" "purp blu" " greenn .";
+}
+body .section .figma {
+  text-align: center;
+  grid-area: figma;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: px;
+  align-items: end;
+  display: grid;
+  margin-bottom: 20px;
+}
+body .section .redd {
+  grid-area: redd;
+  background: #f24e1e;
+  border-radius: 150px 0 0 150px;
+}
+body .section .redw {
+  grid-area: redw;
+  background: #ff7262;
+  border-radius: 0 150px 150px 0;
+}
+body .section .purp {
+  grid-area: purp;
+  background: #a259ff;
+  border-radius: 150px 0 0 150px;
+}
+body .section .blu {
+  grid-area: blu;
+  background: #1abcfe;
+  border-radius: 100%;
+}
+body .section .greenn {
+  grid-area: greenn;
+  background: #0acf83;
+  border-radius: 150px 0 150px 150px;
+}/*# sourceMappingURL=style01.css.map */
