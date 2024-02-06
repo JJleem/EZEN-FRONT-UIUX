@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item1 {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s;
+  margin-right: 50px;
+  border: 1px solid #eee;
+}
+.info1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  background: #000;
+  opacity: 0.8;
+}
+.item1:hover .info1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info1 h2,
+.info1 span {
+  margin-top: 30px;
+}
+.info1 h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.info1 span:nth-of-type(1) {
+  display: block;
+
+  margin-bottom: 20px;
+}
+.info1 .price i {
+  text-decoration: line-through;
+}
+.info1 button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 8px;
+  border: none;
+  background: teal;
+  color: aliceblue;
+  cursor: pointer;
+}
+.item2 {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s;
+  border: 1px solid #eee;
+  margin-right: 50px;
+}
+.info2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  background: #000;
+  opacity: 0.8;
+}
+.item2:hover .info2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info2 h2,
+.info2 span {
+  margin-top: 30px;
+}
+.info2 h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.info2 span:nth-of-type(1) {
+  display: block;
+
+  margin-bottom: 20px;
+}
+.info2 .price i {
+  text-decoration: line-through;
+}
+.info2 button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 8px;
+  border: none;
+  background: teal;
+  color: aliceblue;
+  cursor: pointer;
+}
+.item3 {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s;
+  border: 1px solid #eee;
+}
+.info3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+  background: #000;
+  opacity: 0.8;
+}
+.item3:hover .info3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.info3 h2,
+.info3 span {
+  margin-top: 30px;
+}
+.info3 h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.info3 span:nth-of-type(1) {
+  display: block;
+
+  margin-bottom: 20px;
+}
+.info3 .price i {
+  text-decoration: line-through;
+}
+.info3 button {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 8px;
+  border: none;
+  background: teal;
+  color: aliceblue;
+  cursor: pointer;
+}
