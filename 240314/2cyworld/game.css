@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 35px;
+  justify-content: space-between;
+}
+.contents_title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.title {
+  color: #55b2d4;
+  font: 600 16px/1 "arial";
+}
+.subtitle {
+  font-size: 14px;
+  color: gray;
+  font-family: "arial";
+  padding-bottom: 2px;
+}
+.divideLine {
+  width: 100%;
+  border-top: 1px solid gray;
+  margin: 4px 0;
+}
+.game_container {
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 20px 15px;
+  background: #f6f6f6;
+  width: 100%;
+  height: 158px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 3px; */
+}
+.game_title {
+  font: 700 16px/1 "arial";
+}
+.game_subtitle {
+  font-size: 14px;
+}
+.word_text input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  padding: 0 0 2px 4px;
+}
+.word_text input[type="text"]:focus {
+  outline: none;
+}
+.word_text input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+.word_text input[type="submit"],
+.wrapper_lotto_btn {
+  padding: 2px 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.word_result {
+  color: crimson;
+  font-weight: 800;
+}
+.game_lotto_number {
+  width: 150px;
+  height: 21px;
+  font-size: 14px;
+  background: gold;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px #999;
+  gap: 4px;
+  margin: 5px 0;
+  padding: 2px 6px;
+}
