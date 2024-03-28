@@ -1,0 +1,109 @@
+@import url("./reset.css");
+
+body {
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+#sec0 {
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+#sec1 {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+#sec2 {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+#sec3 {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+#sec4 {
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}
+
+#fp-nav ul li a span {
+  background: #fff;
+}
+
+#nav_icon {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 25px;
+  z-index: 3;
+}
+#nav_icon div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#nav_icon div span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+  /* 토글버튼 클릭하면 모양 변하게하려고 부모요소한테 자연스럽게 효과 적용 */
+}
+#nav_icon div span:nth-child(1) {
+  top: 0;
+}
+#nav_icon div span:nth-child(2) {
+  top: 10px;
+}
+#nav_icon div span:nth-child(3) {
+  top: 20px;
+}
+#nav_icon.active div span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+#nav_icon.active div span:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#nav_icon.active div span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 30px;
+  right: 60px;
+  opacity: 0;
+  /* 평상시에는 opacity: 0; */
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.nav .active {
+  opacity: 1;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  margin-right: 20px;
+}
+.nav ul li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+h1 .title {
+  color: #fff;
+  font-size: 50px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+#sec1.section.active h1.title {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+}
+
+#sec2 .inner {
+  justify-content: space-around;
+}
