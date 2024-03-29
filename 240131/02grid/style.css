@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 100px 600px 1fr 100px;
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-areas:
+    "header header  header" "welcome welcome  welcome" " banner main aside"
+    " footer footer footer";
+}
+.parent div {
+  border: 1px solid #000;
+  display: grid;
+}
+
+.header {
+  grid-area: header;
+  background: yellowgreen;
+  text-align: center;
+}
+.welcome {
+  grid-area: welcome;
+  background: url("./grid-img/01/welcome-image.jpg") center/cover no-repeat;
+}
+.banner {
+  grid-area: banner;
+  text-align: center;
+}
+.main {
+  grid-area: main;
+}
+.main p {
+  padding: 30px;
+}
+.aside {
+  grid-area: aside;
+  text-align: center;
+}
+.footer {
+  grid-area: footer;
+  background: yellowgreen;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "welcome" "banner" "main" "aside" "footer";
+    grid-template-rows: 100px 600px 100px 1fr 100px 100px;
+  }
+}

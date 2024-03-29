@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+%shape {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  gap: 30px;
+  &-item {
+    @extend %shape;
+  }
+}

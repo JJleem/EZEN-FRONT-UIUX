@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 600px;
+  margin: 100px auto;
+}
+#canvas {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  perspective: 1500px;
+}
+#merry {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  animation: rint 10s infinite linear;
+  transform-style: preserve-3d;
+}
+@keyframes rint {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: -115px;
+  transform-style: preserve-3d;
+  /* backface-visibility: hidden; */
+}
+.cell {
+  width: 230px;
+  height: 150px;
+  margin-bottom: 5px;
+  background: url("https://mblogthumb-phinf.pstatic.net/MjAyMDAzMThfMTc4/MDAxNTg0NDk5OTQyNTMy.0BNJEDFDkL5DRW9kbMSinPVQYbOAeXVEDjXj9FT3_SYg.Rfe1Cx19lcYXfTIQXPf_mYiANj2nf1bzGQqANQio-HMg.JPEG.wisconsinlove/%EB%8D%951.jpg?type=w800")
+    center/cover no-repeat;
+  transition: 0.5s;
+}
+
+.cell:hover {
+  transform: scale(1.2) translateZ(50px);
+}
+
+.face:nth-child(1) {
+  transform: rotateY(0deg) translateZ(-370px);
+}
+.face:nth-child(2) {
+  transform: rotateY(36deg) translateZ(-370px);
+}
+.face:nth-child(3) {
+  transform: rotateY(72deg) translateZ(-370px);
+}
+.face:nth-child(4) {
+  transform: rotateY(108deg) translateZ(-370px);
+}
+.face:nth-child(5) {
+  transform: rotateY(144deg) translateZ(-370px);
+}
+.face:nth-child(6) {
+  transform: rotateY(180deg) translateZ(-370px);
+}
+.face:nth-child(7) {
+  transform: rotateY(216deg) translateZ(-370px);
+}
+.face:nth-child(8) {
+  transform: rotateY(252deg) translateZ(-370px);
+}
+.face:nth-child(9) {
+  transform: rotateY(288deg) translateZ(-370px);
+}
+.face:nth-child(10) {
+  transform: rotateY(324deg) translateZ(-370px);
+}

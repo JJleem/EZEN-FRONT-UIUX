@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn {
+  width: 200px;
+  padding: 7px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.order {
+@extend .btn;
+background: purple;
+}
+.add {
+  @extend .btn;
+background: dodgerblue;
+}
+.checkout {
+  @extend .btn;
+border: 1px solid #000;
+color: #000;
+}

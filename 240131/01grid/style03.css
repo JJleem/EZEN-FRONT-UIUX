@@ -1,0 +1,46 @@
+/* .parent {
+  display: grid;
+  border: 5px solid #000;
+  background: khaki;
+  grid-template-areas: "item item . . ." "item item . . .";
+}
+
+.parent div {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #000;
+}
+
+.item {
+  background: crimson;
+  grid-area: item;
+} */
+
+.parent {
+  border: 5px solid #000;
+  background: khaki;
+  display: grid;
+  grid-template-areas: "header header header" "gnb content lnb" "gnb footer .";
+}
+.parent div {
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.header {
+  grid-area: header;
+}
+.gnb {
+  grid-area: gnb;
+}
+.content {
+  grid-area: content;
+}
+.lnb {
+  grid-area: lnb;
+}
+.footer {
+  grid-area: footer;
+}
