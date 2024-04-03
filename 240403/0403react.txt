@@ -1,0 +1,43 @@
+state 변수 : component 가 가지고 있는 상태값
+- 상태 값을 변경하려면 useState() : React Hooks 중 하나!
+- form 태그 요소 안에 있는 기본적인 input 태그 || textarea || select && option 
+- 상태의 변화 값을 check하고, state 변수 값이 업데이트가 될 수 있도록 제어!
+
+* React Hooks
+=> 언제 , 어떤 리액트 훅을 가져다가 사용해야 하는지 모르겠다
+
+1) React 장점 : JS를 활용 작업 => 300줄 / 문제 = bug  => debuging 이 너무어렵다.
+
+
+2) component 안에 존재하는 state 변수값이 업데이트가 되는 순간 => rerendering
+*React 는 Rendering 이 매우 중요한 개념!!!
+=> html을 포함한 기타 웹 브라우저 가 parsing 할 수 있는 문서를 웹 브라우저가 화면에 출력해주는 기능 
+=> Rendering 이라고 함
+언제발생?
+0) component가 mount가 되는 순간 무조건 최초 rendering 이 발생
+1) component 의 state 값이 변경되면 무조건 rendering 이 발생
+2) 부모 component로 부터 받아오는 props 의 값이 변경되면 무조건 rendering 이 발생
+3) 부모 component가 rendering 이 되면, 무조건 자식 component도 rendering 이 됨
+
+*리액트 훅 : "use" +
+useRef() : 
+- Ref = reference 의 약어 => 참조하다
+- 기존 JS, DOM 을 활용해서 html 문서를 컨트롤했던 그 기능!!!
+
+useState() : Component의 State 변수값을 컨트롤 해주는 훅 함수
+useRef() : 특정 요소의 DOM을 컨트롤 해주는 훅 함수
+useEffect() : 컴포넌트의 "생애주기"(life cycle)를(을) 컨트롤 해주는 훅 함수
+-컴포넌트의 생애주기 
+- mount(탄생,시작) => update(상태값 변환) => unmount(컴포넌트 기능종료)
+
+1) '의존성 배열'이 업데이트 or 변경되면 useEffect()안에 callback 실행
+=> 외부 API => state
+=> 웹 브라우저 처음 켜졌을 때에는 data x
+=> 사용자가 정보를 얻기위해 이벤트를발생시킴
+=> 의존성 배열에 복수의 state 값을 적용한 경우, 그중 1개만 업데이트가 되어도 useEffect() 는 실행됨
+
+2) 만약 '의존성 배열' 을 설정하지 않은 경우, 컴포넌트가 랜더링 될 때마다 콜백함수를 실행시킴
+
+3) 만약 '의존성 배열' 에 빈배열을 적용하는 경우, 컴포넌트가 최초 mount가 되는 시점에만 딱 한번 실행됨
+
+cleanup 개념
