@@ -36,7 +36,7 @@ const TodoEditor = () => {
           onKeyDown={onKeyDown}
           placeholder="NEW Todo..."
         />
-        <button onClick={onSubmit}>추가</button>
+        <button onClick={onSubmit}>Plus</button>
       </div>
     </div>
   );
