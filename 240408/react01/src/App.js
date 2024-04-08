@@ -14,7 +14,7 @@ const choice = {
   },
   paper: {
     name: "paper",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimyPSZGGPmBXsazLzmKaCYHt5WM03RPC7LT2n4KLsCA&s",
+    img: "https://5.imimg.com/data5/HC/KF/HZ/SELLER-4619430/white-art-paper.jpg",
   },
 };
 
@@ -22,11 +22,10 @@ function App() {
   const [userSelect, setUserSelect] = useState("");
   const [computerSelect, setComputerSelect] = useState();
   const [result, setResult] = useState("");
+
   const randomChoice = () => {
-    const itemArray = Object.keys;
-    const randomItem = Math.floor(
-      (Math.randomItem = Math.random() * itemArray.length)
-    );
+    const itemArray = Object.keys(choice);
+    const randomItem = Math.floor( Math.random() * itemArray.length);
     const final = itemArray[randomItem];
     return choice[final];
   };
@@ -44,9 +43,10 @@ function App() {
   };
 
   const play = (item) => {
-    setUserSelect(computerChoice);
-    const computerChoice = randomChoice;
-    // const computerChoice = randomChoice;
+    setUserSelect(choice[item]);
+    const computerChoice =randomChoice();
+    setComputerSelect(computerChoice);
+    setResult(judgement(choice[item],computerChoice));
   };
 
   return (
