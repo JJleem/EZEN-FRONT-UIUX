@@ -1,0 +1,123 @@
+React.js
+*지난주 부터 어제까지 작업 React 프로젝트의 공통점
+
+React 팀프로젝트할때?
+
+React : 컴포넌트 기반으로 작동!!
+> 각 조원들이 작업한 페이지를 컴포넌트화 연결
+
+html,css => "a"
+=>
+*Route = 라우트 
+- 경로 
+- 기원 : 네트워크 통신망
+
+
+
+*UI 작업을 진행함에있어서 페이지이동
+- Page Routing
+
+*기존 웹페이지에서의 Page Routing 어떤 방법으로 이뤄졌을까?
+
+
+*SSR : Server Side Rendering
+*=>MPA: Multi Page Application ( = 복수의 페이지를 가지고 운영되는 방식) 
+Client -> Server: index.html / sports.html / entertain.html
+
+*SPA : Single Page Application
+Todolist => html 1개
+index.html 1개만있으면 n개의 페이지를 각각의 컴포넌트를 조합해서 만들어낼 수 있음
+
+
+
+감정 일기장 !!
+=================
+=> 일기를 작성한 날짜
+=> 일기 작성 내용
+=> 오늘의 감정(*기분좋음/ 우울함/ 짜증남)
+
+그날 그날 작성한 일기 데이터를 목록화해서 볼수 있어야 함!
+목록화 되어 있는 페이지 에서는 일기를 삭제할 수 있는 기능
+
+일기장 최신순으로 오래된 순으로도 필터링
+
+세부적인 일기장 =>  수정 기능
+
+1. 일기장을 작성할 수 있는 페이지 => New.js
+2. 작성된 일기장을 읽을 수 있는 페이지 => Diary.js
+3. 작성된 여러개의 일기장을 한 눈에 볼 수 있는 목록화 되어진 페이지 
+=> Home.js
+4. 작성된 일기장을 수정할수있는 페이지 => Edit.js
+
+3개의 페이지 필요 Route 기능 사용
+
+* 컴포넌트는 페이지를 구성하게끔 해주는 요소!!
+* 함수 => 컴포넌트가 아닌, 컴포넌트 내에서 부분적으로 사용해야하는 함수기능!!!
+
+
+npm i react-router-dom 
+으로 라우터 설치
+
+index.js 에서 라우터 설정 해줘야함
+
+import { BrowserRouter } from "react-router-dom"; 입력
+
+Page Routing 기능 구현 !!!
+=> 메인이 되는 컴포넌트 에서 일종의 스위치를 설치!!
+
+1.index.js 
+- 메인 컴포넌트에 페이지 라우팅 기능을 구현하고자 하는 컴포넌트를 찾아서 <BrowserRouter/> 설정
+2. App.js
+- <Routes/> & <Route> => 페이지 분기 작업!
+-<Route / > : path & element
+- path : 경로 => 상단 주소창의 경로 정의
+- element: 보여줄 컴포넌트 소스 정의
+
+<예>
+https://www.musinsa.com/app/goods/1149329?loc=goods_rank
+https://www.musinsa.com/app/goods/3771149?loc=goods_rank
+
+Page Routing 을 설정할 때, URL Parameter 정의할 수 있음!!!
+기본적인 page url 뒤에 "/" 특정정보라는 것을 인식할 수 있는 일종의 변수 값!!!
+
+URL Parameter 값 뒤에 "?" 와 함께 입력되어 지는 값을 Query String 이라고 부름!
+=> Query: 질의하다 질문하다 
+=> String: 문자열
+
+
+https://www.musinsa.com/search/musinsa/integration?q=%EB%B0%98%ED%8C%94
+
+> vs code 폴더/ 파일 : 한글x
+
+
+useParams : 상단 주소창에서 파라미터의 값을 찾아올 때 사용하는 리액트 훅
+useSearchParams : 상단 주소창에서 쿼리스트링의 값을 찾아올 때 사용하는 리액트 훅
+
+
+
+
+*React.js
+-useState
+-useRef
+-useEffect
+-useMemo
+-useContext
+-useReducer
+
+-useParams
+-useSearchParams
+> Route, Routing
+> page routing 기능 구현
+> 동적 라우팅 생성
+> mpa VS spa
+> SSR VS CSR
+
+
+
+* 버튼을 상황에 맞춰서 사용!
+1)작성완료!
+2)취소하기!
+3)뒤로가기
+>색상/텍스트/기능 다 바뀌어야함
+html 에서 1개의 태그에 복수의 class 를 적용하고자할때?
+<button class = "Button holdon">
