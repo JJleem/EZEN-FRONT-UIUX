@@ -3,7 +3,7 @@ import Header from "../component/Header";
 import Button from "../component/Button";
 import DiaryList from "../component/DiaryList";
 import { DiaryStateContext } from "../App";
-import { getMonthRangeByDate } from "../util";
+import { getMonthRangeByDate, setPageTitle } from "../util";
 import { useState, useContext, useEffect } from "react";
 
 const Home = () => {
@@ -11,7 +11,10 @@ const Home = () => {
   const [pivotDate, setPivotDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
   useEffect(() => {
-    if (data.length > 1) {
+    setPageTitle("감정일기장 Main Page");
+  }, []);
+  useEffect(() => {
+    if (data.length >= 1) {
       const { beginTimeStamp, endTimeStamp } = getMonthRangeByDate(pivotDate);
       setFilteredData(
         data.filter(
