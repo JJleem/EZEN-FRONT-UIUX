@@ -20,18 +20,18 @@
     },
     {
       "id": 2,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/69/fc/69fc3925695d9d92b66a9e4b0c9d426f39f5e7f1.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
-      "title": "스웨트셔츠",
-      "price": 39900,
+      "img": "https://lp2.hm.com/hmgoepprod?set=source[/83/2b/832bb20413840bcfd28a7e13b0744783e81af275.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]",
+      "title": "오버사이즈 코튼 셔츠",
+      "price": 29900,
       "choice": false,
       "new": true,
       "size": ["S", "M", "L"]
     },
     {
       "id": 3,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/42/18/42184d4a48266112e6f9b96519fa91ff68ab53aa.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
-      "title": "디자인 후드티",
-      "price": 39900,
+      "img": "https://lp2.hm.com/hmgoepprod?set=source[/07/78/07788c9017d60ea02b399e161bc71d77b1807f8a.jpg],origin[dam],category[ladies_tops_printed_tshirts],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]",
+      "title": "오버사이즈 프린트 티셔츠",
+      "price": 19900,
       "choice": false,
       "new": true,
       "size": ["S", "M", "L"]

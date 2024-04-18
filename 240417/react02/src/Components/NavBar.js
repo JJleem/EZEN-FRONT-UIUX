@@ -24,7 +24,7 @@ const NavBar = ({ authenticate, setAuthenticate }) => {
   return (
     <div>
       <div className="nav-header">
-        <div className="toggle-munue">
+        <div className="toggle-menu">
           <FontAwesomeIcon icon={faBars} />
         </div>
 
@@ -34,7 +34,7 @@ const NavBar = ({ authenticate, setAuthenticate }) => {
             <span>로그아웃</span>
           </div>
         ) : (
-          <div onClick={() => setAuthenticate(true)} className="login-menu">
+          <div onClick={() => navigate("/login")} className="login-menu">
             <FontAwesomeIcon icon={faUser} />
             <span>로그인</span>
           </div>
