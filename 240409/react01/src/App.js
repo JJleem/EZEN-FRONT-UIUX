@@ -64,14 +64,6 @@ function App() {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(0);
-  // useEffect(() => {
-  //   dispatch({
-  //     type: "INIT",
-  //     data: mockData,
-  //   });
-  //   setIsDataLoaded(true);
-  // }, []);
-
   useEffect(() => {
     const rawData = localStorage.getItem("diary");
     if (!rawData) {

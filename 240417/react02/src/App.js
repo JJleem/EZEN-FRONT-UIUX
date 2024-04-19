@@ -10,9 +10,7 @@ import PriviteRoute from "./Components/PriviteRoute";
 
 function App() {
   const [authenticate, setAuthenticate] = useState(false);
-  useEffect(() => {
-    console.log(authenticate);
-  }, [authenticate]);
+  useEffect(() => {}, [authenticate]);
 
   return (
     <div>
