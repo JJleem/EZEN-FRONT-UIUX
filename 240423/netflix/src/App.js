@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 function App() {
   return (
-    <div className="App">
+    <div className="wrapper">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

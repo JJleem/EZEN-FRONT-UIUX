@@ -8,16 +8,13 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import netflix from "../img/netflix.png";
 const Navigation = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar className="navbar" bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <img
-          src="https://cromidi.cafe24.com/netflix/netflix.png"
-          alt="netflix"
-          width={100}
-        />
-
+        <img src={netflix} alt="netflix" width={100} />
+        <img className="image" />
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
