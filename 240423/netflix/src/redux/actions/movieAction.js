@@ -9,25 +9,38 @@ const getMovies = () => {
         type: "GET_MOVIES_REQUEST",
       });
       const popularMovieApi = api.get(
-        `/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+        `/movie/popular?api_key=${API_KEY}&language=ko-KR&page=1`
       );
       const topRatedMovieApi = api.get(
-        `/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`
+        `/movie/top_rated?api_key=${API_KEY}&language=ko-KR&page=1`
       );
       const upComingMovieApi = api.get(
-        `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
+        `/movie/upcoming?api_key=${API_KEY}&language=ko-KR&page=1`
       );
-      const [popularMovies, topRatedMovies, upComingMovies] = await Promise.all(
-        [popularMovieApi, topRatedMovieApi, upComingMovieApi]
+      const genereApi = api.get(
+        `/genre/movie/list?api_key=${API_KEY}&language=ko`
+        
       );
+
+      const [popularMovies, topRatedMovies, upComingMovies, genereList] =
+        await Promise.all([
+          popularMovieApi,
+          topRatedMovieApi,
+          upComingMovieApi,
+          genereApi,
+        ]);
+      console.log(genereApi);
       dispatch({
         type: "GET_MOVIES_SUCCESS",
         payload: {
           popularMovies: popularMovies.data,
           topRatedMovies: topRatedMovies.data,
           upComingMovies: upComingMovies.data,
+          genereList: genereList.data,
+          loading: true,
         },
       });
+      console.log(genereList);
     } catch (error) {
       dispatch({ type: "GET_MOVIES_FAILURE" });
     }
