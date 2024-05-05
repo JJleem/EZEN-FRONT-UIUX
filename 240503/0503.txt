@@ -1,0 +1,46 @@
+타입스크립트 & 리액트
+
+1) 타입스크립트 
+- npm i @types/npde
+- npm i typescript
+- npm i ts-node
+- npm i tsx
+
+2) 리액트
+- npx create-react app (폴더명)
+
+> TS & React 명령어!!!
+- npx create-react-app 01tsreact --template typescript
+
+
+*React 시즌1
+> props => 객체 
+
+* 단방향 / 컴포넌트간에 데이터 전송 / page router 기능 불가
+
+> state / redux / thunk / axios
+
+npm i @types/styled-components
+
+*ToDoList : TS & React
+1. TS & React 를 같이 사용해서 작업할 수 있는 프로젝트 예제
+2. interface / 함수의 매개변수 타입정의
+3. React 작업하는 프로세스 과정
+> App => Component 과정
+
+다음주 월 : 타입스크립트 문법 일단락
+다다음주 : TS & React 예제
+> Netflix
+> 가상화폐
+> 칸반 보드
+> etc...
+
+
+
+코딩테스트
+
+
+
+https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/%EC%9E%84%EC%9E%AC%EC%A4%80/KR1?api_key=/RGAPI-8185d37e-8f6a-40af-8d0c-b9d32bb7224c
+
+https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/%EC%9E%84%EC%9E%AC%EC%A4%80/KR1?api_key=RGAPI-8185d37e-8f6a-40af-8d0c-b9d32bb7224c
