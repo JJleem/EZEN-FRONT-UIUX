@@ -1,0 +1,55 @@
+1. styled-components
+
+props 부모 자식 객체형태의 자료값을 전달!!
+
+처음 정의한 스타일컴포넌트의 태그 값을 원하는대로 수정할 수 있음
+as= "태그네임" 
+
+예시
+const Input = styled.input.attrs({ required: true })``;
+attrs.({속성값})
+
+스타일의 템플릿화가 가능하다
+
+**스타일 컴포넌트는 객체자료형태의 theme을 가질수있다.
+> theme 정의하는 장소는 App 컴포넌트의 상위path(*경로)
+> useContext/Redux => Root컴포넌트 위에다가 설정 => Root 컴포넌트 하위 존재 컴포넌트들이 data값을 받을 수 있었음
+
+2. Type script + styled-components + React
+
+
+
+
+TS & React =>  input 타입정의!!
+=> 내장되어있는 문법! 
+
+
+input 태그를 사용해서 사용자에게 어떤 값을 입력받을 때 타입의 정의 
+1) 내장되어있는 문법을 사용해서 타입을 정의!
+React.FormEvent<HTMLInputElement> 문법임 외워야함
+
+2) JS=> 사용자가 입력한 값 => event.target.value
+사용자가 입력한 값의 타입 : event.currentTarget
+
+3) Input 태그를 통해 입력받은 값을 서버로 전달하고자 할 때, 사용되는 이벤트 핸들러 타입!!
+React.FormEvent<HTMLFormElement>
+
+*스타일컴포넌트 를 활용 Theme
+ThemeProvider 를 활용해서 전달되어지는 theme이라는 객체의 타입은 기존에 했던 타입 정의와
+다름!
+
+처음에 스타일컴포넌트를 npm으로 설치할때, @types => 외부 라이브러리를 통해서 가져오는 속성값들의 타입을 정의해서 가져올 수 있음!!
+ThemeProvider = 내부적으로 타입정의가 안되어있음!
+개발자가 theme으로 어떤 형태의 값으로 정의할지 알수 없기 때문에, 사전에 타입정의가 원천적으로 불가!
+
+themeProvider를 활용해서 자식컴포넌트에 theme을 전달하고자 할 때,
+
+1) styled.d.ts : 타입정의
+- 공식홈페이지 문법 그대로 사용
+
+2) 자식컴포넌트에 전달할 theme 값을 정의 : theme.ts
+- theme 값을 정의 => 타입(*styled.d.ts) 세팅
+
+3) index.tsx => <ThemeProvider> 적용
+
+4) 자식컴포넌트에서 사용! 예 :( ${(props)=> props.theme.??}
