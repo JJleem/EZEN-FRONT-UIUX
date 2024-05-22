@@ -149,3 +149,32 @@ let union5: Intersection = {
   language: "",
   color: "",
 };
+
+enum Role {
+  ADMIN = 0,
+  USER = 1,
+  GUEST = 2,
+}
+
+const user11 = {
+  name: "David",
+  role: Role.ADMIN,
+};
+const user12 = {
+  name: "Kevin",
+  role: Role.USER,
+};
+const user13 = {
+  name: "Jose",
+  role: Role.GUEST,
+};
+
+enum Language {
+  korea = "ko",
+  england = "uk",
+}
+const user14 = {
+  name: "짱구",
+  role: Role.ADMIN,
+  language: Language.korea,
+};

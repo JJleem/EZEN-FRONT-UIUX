@@ -20,3 +20,18 @@ list.insertAt(2, 2);
 list.insertAt(3, 3);
 list.insertAt(4, 4);
 list.printAll();
+console.log("=== clear() 호출 ===");
+list.clear();
+list.printAll();
+console.log("=== insertLast() 세 번 호출 ===");
+list.insertLast(0);
+list.insertLast(1);
+list.insertLast(2);
+list.printAll();
+console.log("=== deleteAt() 호출 ===");
+list.deleteAt(0);
+list.printAll();
+list.deleteAt(1);
+list.printAll();
+console.log("=== deleteAt() 호출 ===");
+

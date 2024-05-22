@@ -1,13 +1,6 @@
 import React from "react";
-import { ITodo, toDoState } from "./atoms";
+import { ITodo, toDoState, Categories } from "./atoms";
 import { useSetRecoilState } from "recoil";
-
-const food = ["pizza", "mango", "kimchi", "kimbab"];
-//지금 아래 보이는 배열에서  mango를 빼고, 그자리에 gim 을 넣으세요;
-const front = ["pizza"];
-const back = ["kimchi", "kimbab"];
-const result = [...front, "gim", ...back];
-console.log(result);
 
 const Todo = ({ text, category, id }: ITodo) => {
   const setToDos = useSetRecoilState(toDoState);
@@ -15,27 +8,30 @@ const Todo = ({ text, category, id }: ITodo) => {
     const { name } = event.target as HTMLButtonElement;
     setToDos((oldToDos) => {
       const targetIndex = oldToDos.findIndex((toDo) => toDo.id === id);
-      const oldToDo = oldToDos[targetIndex];
-      const newTodo = { id, text, category: name };
+      const newTodo = { id, text, category: name as any };
       console.log(newTodo);
-      return oldToDos;
+      return [
+        ...oldToDos.slice(0, targetIndex),
+        newTodo,
+        ...oldToDos.slice(targetIndex + 1),
+      ];
     });
   };
   return (
     <li>
       <span>{text}</span>
-      {category !== "TO_DO" && (
-        <button name="TO_DO" onClick={onClick}>
+      {category !== Categories.TO_DO && (
+        <button name={Categories.TO_DO} onClick={onClick}>
           ToDo
         </button>
       )}
-      {category !== "DOING" && (
-        <button name="DOING" onClick={onClick}>
+      {category !== Categories.DOING && (
+        <button name={Categories.DOING} onClick={onClick}>
           Doing
         </button>
       )}
-      {category !== "DONE" && (
-        <button name="DONE" onClick={onClick}>
+      {category !== Categories.DONE && (
+        <button name={Categories.DONE} onClick={onClick}>
           Done
         </button>
       )}
