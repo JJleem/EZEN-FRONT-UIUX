@@ -35,3 +35,12 @@ list.deleteAt(1);
 list.printAll();
 console.log("=== deleteAt() 호출 ===");
 
+//enqueue : 데이터 삽입 기능
+//dequeue : 데이터 제거 기능
+//front : 데이터 참조 기능
+//isEmpty : 데이터가 비어있는지 여부 확인 기능
+//printAll() : 연결리스트를 출력하는 기능
+//addFirst() : 연결리스트 최초 인덱스에 값을 추가하는 기능
+//removeFirst() : 연길리스트 마지막 인덱스에 값을 추가하는 기능
+//removeLast() : 연결리스트 마지막 인덱스에 값을 삭제하는 기능
+//isEmpty() : 연결리스트 값이 존재하는지 여부를 확인하는 기능
