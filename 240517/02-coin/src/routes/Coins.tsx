@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { fetchCoins } from "../api";
 import { useQuery } from "react-query";
 import { Helmet } from "react-helmet";
-
+import { isDarkAtom } from "../atoms";
+import { useSetRecoilState } from "recoil";
 const Container = styled.div`
   padding: 20px;
   max-width: 1080px;
@@ -21,8 +22,8 @@ const Header = styled.header`
 const CoinList = styled.ul``;
 
 const Coin = styled.li`
-  background-color: ${(props) => props.theme.textColor};
-  color: ${(props) => props.theme.bgColor};
+  background-color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.textColor};
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 16px;
@@ -32,7 +33,7 @@ const Coin = styled.li`
     padding: 20px;
     transition: all 0.3s;
     &:hover {
-      color: ${(props) => props.theme.accentColor};
+      color: ${(props) => props.theme.bgColor};
     }
   }
 `;
@@ -64,7 +65,46 @@ interface CoinInterface {
   type: string;
 }
 
+<<<<<<< HEAD
+=======
+// const coins = [
+//   {
+//     id: "btc - bitcoin",
+//     name: "Bitcoin",
+//     symbol: "BTC",
+//     rank: 1,
+//     is_new: false,
+//     is_active: true,
+//     type: "coin",
+//   },
+//   {
+//     id: "eth - ethereum",
+//     name: "Ethereum",
+//     symbol: "ETH",
+//     rank: 2,
+//     is_new: false,
+//     is_active: true,
+//     type: "coin",
+//   },
+//   {
+//     id: "hex - hex",
+//     name: "Hex",
+//     symbol: "Hex",
+//     rank: 3,
+//     is_new: false,
+//     is_active: true,
+//     type: "token",
+//   },
+// ];
+
+interface ICoinProps {
+  toggleDark: () => void;
+}
+
+>>>>>>> c2f951c6737e94fa99ee5db5c5ae52e6dd83d408
 const Coins = () => {
+  const setterFn = useSetRecoilState(isDarkAtom);
+
   const { isLoading, data } = useQuery<CoinInterface[]>("allCoins", fetchCoins);
 
   if (isLoading) {
@@ -77,6 +117,7 @@ const Coins = () => {
         </Helmet>
         <Header>
           <Title>Coins Information</Title>
+          <button onClick={() => setterFn((prev) => !prev)}>Toggle Mode</button>
         </Header>
         <CoinList>
           {data?.map((coin) => (
