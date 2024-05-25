@@ -202,7 +202,7 @@ const Coin = () => {
       </Helmet>
       <Header>
         <Title onClick={onClickHome}>
-          coin :{" "}
+          Coin :{" "}
           {state
             ? state
             : loading

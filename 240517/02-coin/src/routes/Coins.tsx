@@ -64,57 +64,8 @@ interface CoinInterface {
   type: string;
 }
 
-// const coins = [
-//   {
-//     id: "btc - bitcoin",
-//     name: "Bitcoin",
-//     symbol: "BTC",
-//     rank: 1,
-//     is_new: false,
-//     is_active: true,
-//     type: "coin",
-//   },
-//   {
-//     id: "eth - ethereum",
-//     name: "Ethereum",
-//     symbol: "ETH",
-//     rank: 2,
-//     is_new: false,
-//     is_active: true,
-//     type: "coin",
-//   },
-//   {
-//     id: "hex - hex",
-//     name: "Hex",
-//     symbol: "Hex",
-//     rank: 3,
-//     is_new: false,
-//     is_active: true,
-//     type: "token",
-//   },
-// ];
-
 const Coins = () => {
   const { isLoading, data } = useQuery<CoinInterface[]>("allCoins", fetchCoins);
-  // const [coins, setCoins] = useState<CoinInterface[]>([]);
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  // const data = async () => {
-  //   const response = await fetch(
-  //     "https://my-json-server.typicode.com/Divjason/coinlist/coins"
-  //   );
-  //   const json = await response.json();
-  //   console.log(json);
-  // };
-  // (async () => {
-  //   const response = await fetch(
-  //     "https://my-json-server.typicode.com/Divjason/coinlist/coins"
-  //   );
-  //   const json = await response.json();
-  //   setCoins(json);
-  //   setLoading(false);
-  // })();
-  // }, []);
 
   if (isLoading) {
     return <Loader>loading</Loader>;
